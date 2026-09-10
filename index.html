@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty & CO LX — Salão de Beleza em Lisboa</title>
+<meta name="description" content="Beauty & CO LX, salão de beleza na Alameda Dom Afonso Henriques 66, Lisboa. Avaliação 5,0 com 63 reviews. Marque o seu momento de beleza.">
+<meta name="keywords" content="salão de beleza Lisboa, cabeleireiro Lisboa, estética Lisboa, manicure Lisboa, maquilhagem Lisboa, tratamentos de beleza Lisboa">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2E6E6A;
+    --secondary: #C97B5A;
+    --background: #F7F1E6;
+    --text: #2B2622;
+    --cta: #C97B5A;
+    --font-heading: 'Fraunces', serif;
+    --font-body: 'Karla', sans-serif;
+    --radius: 6px;
+    --shadow-soft: 0 8px 40px rgba(44,38,34,0.10), 0 2px 12px rgba(44,38,34,0.07);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--background);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(247,241,230,0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(46,110,106,0.12);
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  nav ul li a {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  nav ul li a:hover { color: var(--primary); }
+
+  .nav-cta-li a {
+    background: var(--cta);
+    color: #fff !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--radius);
+    transition: background 0.2s, transform 0.2s !important;
+  }
+
+  .nav-cta-li a:hover {
+    background: #b56a4a !important;
+    transform: translateY(-1px);
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    aria-label: "Menu";
+  }
+
+  .burger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 767px) {
+    .burger { display: flex; }
+
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 64px;
+      left: 0; right: 0;
+      background: rgba(247,241,230,0.98);
+      padding: 1.5rem 2rem 2rem;
+      gap: 1.2rem;
+      border-bottom: 1px solid rgba(46,110,106,0.12);
+      box-shadow: 0 8px 24px rgba(44,38,34,0.08);
+    }
+
+    nav ul.open {
+      display: flex;
+    }
+
+    nav ul li a {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    nav ul {
+      display: flex !important;
+      flex-direction: row;
+      position: static;
+      background: none;
+      padding: 0;
+      box-shadow: none;
+      border: none;
+    }
+  }
+
+  /* ===== CTA BUTTON ===== */
+  .cta {
+    display: inline-block;
+    background: var(--cta);
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.85rem 2rem;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 16px rgba(201,123,90,0.25);
+  }
+
+  .cta:hover {
+    background: #b56a4a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(201,123,90,0.35);
+  }
+
+  /* ===== SECTION BASE ===== */
+  section {
+    padding: 5rem 1.5rem;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .section-heading {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--primary);
+    margin-bottom: 1.25rem;
+  }
+
+  .section-text {
+    font-size: 1.05rem;
+    color: var(--text);
+    opacity: 0.85;
+    max-width: 600px;
+    line-height: 1.8;
+  }
+
+  /* ===== FADE IN ANIMATION ===== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== HERO ===== */
+  #hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, rgba(43,38,34,0.72) 0%, rgba(43,38,34,0.38) 55%, rgba(43,38,34,0.10) 100%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 7rem 1.5rem 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 580px;
+    margin-left: max(1.5rem, calc((100vw - 1100px)/2));
+  }
+
+  .hero-label {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    opacity: 0.95;
+  }
+
+  .hero-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.08;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-heading em {
+    font-style: italic;
+    color: #f0d9c8;
+  }
+
+  .hero-sub {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+  }
+
+  .hero-text {
+    font-family: var(--font-body);
+    font-size: 0.97rem;
+    color: rgba(255,255,255,0.72);
+    margin-bottom: 2.25rem;
+    line-height: 1.7;
+  }
+
+  .hero-stars {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-stars .stars { color: #f5c842; font-size: 1.1rem; letter-spacing: 2px; }
+  .hero-stars span { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
+
+  /* ===== ABOUT ===== */
+  #sobre {
+    background: #fff;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .about-img-wrap {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: visible;
+    aspect-ratio: 4/3;
+  }
+
+  .about-img-wrap img {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* corner_frame decoration */
+  .corner-frame {
+    position: relative;
+  }
+
+  .corner-frame::before {
+    content: '';
+    position: absolute;
+    top: -14px;
+    left: -14px;
+    width: 60px;
+    height: 60px;
+    border-top: 2px solid var(--secondary);
+    border-left: 2px solid var(--secondary);
+    border-radius: 2px 0 0 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .corner-frame::after {
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    right: -14px;
+    width: 60px;
+    height: 60px;
+    border-bottom: 2px solid var(--secondary);
+    border-right: 2px solid var(--secondary);
+    border-radius: 0 0 2px 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .about-text .section-heading { margin-bottom: 1.25rem; }
+
+  .about-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--background);
+    border: 1px solid rgba(46,110,106,0.18);
+    border-radius: 50px;
+    padding: 0.45rem 1.1rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 1.75rem;
+  }
+
+  .about-badge .star { color: #f5c842; }
+
+  @media (min-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* ===== SERVICES ===== */
+  #servicos {
+    background: var(--background);
+  }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .services-header .section-text {
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .service-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 2.25rem 2rem;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--secondary);
+    border-radius: 3px 0 0 3px;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(44,38,34,0.13);
+  }
+
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+    color: var(--text);
+    opacity: 0.8;
+    line-height: 1.7;
+  }
+
+  .services-cta {
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* ===== REVIEWS ===== */
+  #avis {
+    background: #fff;
+  }
+
+  .reviews-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .review-card {
+    background: var(--background);
+    border-radius: var(--radius);
+    padding: 2.5rem 2rem 2rem;
+    position: relative;
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* big_quote style */
+  .review-card::before {
+    content: '\201C';
+    font-family: var(--font-heading);
+    font-size: 6rem;
+    color: var(--secondary);
+    opacity: 0.25;
+    position: absolute;
+    top: -0.5rem;
+    left: 1.25rem;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .review-stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .review-stars span { color: #f5c842; font-size: 1.1rem; }
+
+  .review-quote {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .review-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .review-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .review-author-info strong {
+    display: block;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .review-author-info span {
+    font-size: 0.82rem;
+    color: var(--text);
+    opacity: 0.55;
+  }
+
+  @media (min-width: 768px) {
+    .reviews-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* ===== GALLERY ===== */
+  #galeria {
+    background: var(--background);
+  }
+
+  .gallery-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  /* asymmetric grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 260px 200px;
+    gap: 1rem;
+  }
+
+  .gallery-item {
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .gallery-item.large {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+
+  .gallery-item.medium {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .gallery-item.small {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.04);
+  }
+
+  /* corner_frame on gallery items */
+  .gallery-item.large {
+    position: relative;
+  }
+
+  .gallery-item.large::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border-top: 2px solid rgba(255,255,255,0.6);
+    border-left: 2px solid rgba(255,255,255,0.6);
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 1px 0 0 0;
+  }
+
+  @media (min-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 320px 220px;
+    }
+
+    .gallery-item.large {
+      grid-column: 1;
+      grid-row: 1 / 3;
+    }
+
+    .gallery-item.medium {
+      grid-column: 2 / 4;
+      grid-row: 1;
+    }
+
+    .gallery-item.small {
+      grid-column: 2 / 4;
+      grid-row: 2;
+    }
+  }
+
+  /* ===== HOURS & LOCATION ===== */
+  #horarios {
+    background: #fff;
+  }
+
+  .hours-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .hours-info h2 { margin-bottom: 1.5rem; }
+
+  .hours-contact {
+    background: var(--background);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hours-contact p {
+    font-size: 0.97rem;
+    color: var(--text);
+    opacity: 0.85;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  .hours-contact .address-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+  }
+
+  .hours-contact .address-line .icon {
+    color: var(--secondary);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .hours-note {
+    background: var(--background);
+    border-left: 3px solid var(--secondary);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    color: var(--text);
+    opacity: 0.85;
+  }
+
+  .map-wrap {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    height: 340px;
+  }
+
+  .map-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  @media (min-width: 768px) {
+    .hours-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* ===== CONTACT FORM ===== */
+  #contacto {
+    background: var(--background);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .contact-info h2 { margin-bottom: 1.25rem; }
+
+  .contact-info p {
+    font-size: 1rem;
+    color: var(--text);
+    opacity: 0.82;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.97rem;
+    color: var(--text);
+  }
+
+  .contact-detail .icon {
+    width: 36px;
+    height: 36px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .contact-form-wrap {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text);
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1.5px solid rgba(46,110,106,0.2);
+    border-radius: var(--radius);
+    font-family: var(--font-body);
+    font-size: 0.97rem;
+    color: var(--text);
+    background: var(--background);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(46,110,106,0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+  }
+
+  .form-submit { width: 100%; text-align: center; }
+  .form-submit .cta { width: 100%; }
+
+  @media (min-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1.2fr;
+    }
+  }
+
+  /* ===== TRUST SIGNALS ===== */
+  #confianca {
+    background: var(--primary);
+    padding: 4rem 1.5rem;
+  }
+
+  .trust-inner {
+    text-align: center;
+  }
+
+  .trust-inner .section-label { color: rgba(255,255,255,0.65); }
+
+  .trust-inner h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .trust-inner p {
+    color: rgba(255,255,255,0.78);
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .trust-item {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: var(--radius);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: background 0.2s;
+  }
+
+  .trust-item:hover {
+    background: rgba(255,255,255,0.16);
+  }
+
+  .trust-item .t-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .trust-item span {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .trust-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .trust-rating .stars { color: #f5c842; font-size: 1.1rem; letter-spacing: 2px; }
+
+  @media (min-width: 768px) {
+    .trust-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--text);
+    color: rgba(255,255,255,0.75);
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-brand .nav-logo {
+    color: #fff;
+    font-size: 1.4rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    opacity: 0.7;
+  }
+
+  .footer-links h4 {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 1rem;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .footer-links ul li a {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.7);
+    transition: color 0.2s;
+  }
+
+  .footer-links ul li a:hover { color: #fff; }
+
+  .footer-contact h4 {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 1rem;
+  }
+
+  .footer-contact p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    opacity: 0.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-bottom {
+    max-width: 1100px;
+    margin: 2.5rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    font-size: 0.82rem;
+    opacity: 0.45;
+  }
+
+  @media (min-width: 768px) {
+    .footer-inner {
+      grid-template-columns: 2fr 1fr 1.5fr;
+    }
+
+    .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav aria-label="Navegação principal">
+  <a href="#hero" class="nav-logo">Beauty & CO LX</a>
+  <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="nav-menu" role="list">
+    <li><a href="#sobre">Sobre nós</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#avis">Avaliações</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#horarios">Horários</a></li>
+    <li class="nav-cta-li"><a href="#contacto" class="cta" aria-label="Marque a sua visita">Marque a sua visita</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero" aria-label="Apresentação do salão">
+  <div class="hero-bg">
+    <img src="assets/hero.jpg" alt="Interior do salão de beleza Beauty & CO LX em Lisboa" loading="eager">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content fade-in">
+    <span class="hero-label">Salão de Beleza em Lisboa</span>
+    <h1 class="hero-heading">Beauty &amp; <em>CO LX</em></h1>
+    <p class="hero-sub">Salão de beleza em Lisboa</p>
+    <p class="hero-text">Um espaço dedicado ao seu cuidado, na Alameda Dom Afonso Henriques 66, em Lisboa.</p>
+    <div class="hero-stars">
+      <span class="stars">★★★★★</span>
+      <span>5,0 — 63 avaliações verificadas</span>
+    </div>
+    <a href="tel:+351917645732" class="cta" aria-label="Ligar agora para o Beauty & CO LX">Ligar agora</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="sobre" aria-label="Sobre o Beauty & CO LX">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap corner-frame fade-in">
+        <img src="assets/gallery-1.jpg" alt="Ambiente acolhedor do salão Beauty & CO LX" loading="lazy">
+      </div>
+      <div class="about-text fade-in">
+        <span class="section-label">Sobre nós</span>
+        <h2 class="section-heading">Um espaço feito para si</h2>
+        <p class="section-text">Na Beauty &amp; CO LX, cada visita é um momento de cuidado e bem-estar. Estamos na Alameda Dom Afonso Henriques 66 - 1 dto, em Lisboa, e contamos com uma avaliação de 5,0 baseada em 63 reviews. A nossa equipa recebe-a com simpatia e profissionalismo, para que saia sempre satisfeita.</p>
+        <div class="about-badge">
+          <span class="star">★</span>
+          5,0 — 63 avaliações no Google
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="servicos" aria-label="Serviços do salão de beleza">
+  <div class="container">
+    <div class="services-header fade-in">
+      <span class="section-label">O que oferecemos</span>
+      <h2 class="section-heading">Os nossos serviços</h2>
+      <p class="section-text">Cuidamos de si com dedicação e qualidade. Fale connosco para conhecer todos os serviços disponíveis e encontrar o momento ideal para a sua marcação.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <span class="service-icon">✂️</span>
+        <h3>Cabelo</h3>
+        <p>Corte, coloração, tratamentos e penteados realizados com técnica e atenção ao detalhe, para um resultado natural e duradouro.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">💅</span>
+        <h3>Manicure e Pedicure</h3>
+        <p>Cuidados completos para as suas mãos e pés, com produtos profissionais e acabamentos impecáveis para cada ocasião.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">✨</span>
+        <h3>Tratamentos de Estética</h3>
+        <p>Serviços de estética facial e corporal pensados para o seu bem-estar, com produtos de alta qualidade e técnicas personalizadas.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">💄</span>
+        <h3>Maquilhagem</h3>
+        <p>Maquilhagem profissional para eventos, cerimónias ou o dia a dia, adaptada ao seu estilo e às suas preferências.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">🌿</span>
+        <h3>Hidratação e Nutrição</h3>
+        <p>Tratamentos intensivos de hidratação para cabelo e pele, com fórmulas profissionais que restauram o brilho e a vitalidade.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">🕊️</span>
+        <h3>Momento de Bem-estar</h3>
+        <p>Um ambiente calmo e acolhedor onde cada detalhe é pensado para que se sinta cuidada e renovada a cada visita.</p>
+      </div>
+    </div>
+    <div class="services-cta fade-in">
+      <a href="tel:+351917645732" class="cta" aria-label="Ligar para marcar serviço">Marque a sua visita</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="avis" aria-label="Avaliações dos clientes">
+  <div class="container">
+    <div class="reviews-header fade-in">
+      <span class="section-label">Avaliações</span>
+      <h2 class="section-heading">O que dizem os nossos clientes</h2>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="review-quote">"Serviço, como sempre, maravilhoso! As minhas unhas para o início de verão ficaram belíssimas."</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">M</div>
+          <div class="review-author-info">
+            <strong>Margarida Mourao</strong>
+            <span>há 3 meses</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="review-quote">"Não vou a outro lado! Sempre qualidade exemplar e simpatia ❤️"</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">M</div>
+          <div class="review-author-info">
+            <strong>Margarida Bettencourt</strong>
+            <span>há 3 meses</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="review-quote">"A Tânia é um amor e muito boa profissional. Recomendo muito!"</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">J</div>
+          <div class="review-author-info">
+            <strong>Joana Mesquitela</strong>
+            <span>há 6 meses</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="galeria" aria-label="Galeria de imagens do salão">
+  <div class="container">
+    <div class="gallery-header fade-in">
+      <span class="section-label">Galeria</span>
+      <h2 class="section-heading">O nosso espaço e trabalho</h2>
+      <p class="section-text" style="margin:0 auto;">Conheça um pouco do nosso espaço e do nosso trabalho. Estamos na Alameda Dom Afonso Henriques 66, em Lisboa.</p>
+    </div>
+    <div class="gallery-grid" style="margin-top:2.5rem;">
+      <div class="gallery-item large fade-in">
+        <img src="assets/hero.jpg" alt="Salão de beleza Beauty & CO LX — vista geral" loading="lazy">
+      </div>
+      <div class="gallery-item medium fade-in">
+        <img src="assets/gallery-1.jpg" alt="Detalhe de tratamento de beleza no Beauty & CO LX" loading="lazy">
+      </div>
+      <div class="gallery-item small fade-in">
+        <img src="assets/gallery-2.jpg" alt="Ambiente e cuidados no salão Beauty & CO LX em Lisboa" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & LOCATION -->
+<section id="horarios" aria-label="Horários e localização do salão">
+  <div class="container">
+    <div class="hours-grid">
+      <div class="hours-info fade-in">
+        <span class="section-label">Onde estamos</span>
+        <h2 class="section-heading">Visite-nos em Lisboa</h2>
+        <div class="hours-contact">
+          <div class="address-line">
+            <span class="icon">📍</span>
+            <span>Alameda Dom Afonso Henriques 66 - 1 dto, 1900-183 Lisboa, Portugal</span>
+          </div>
+          <div class="address-line">
+            <span class="icon">📞</span>
+            <a href="tel:+351917645732" style="color:var(--text);">+351 917 645 732</a>
+          </div>
+        </div>
+        <div class="hours-note">
+          <strong>Horários:</strong> Para informações sobre horários e disponibilidade, contacte-nos pelo telefone +351 917 645 732.
+        </div>
+        <a href="tel:+351917645732" class="cta" aria-label="Ligar agora para o Beauty & CO LX">Ligar agora</a>
+      </div>
+      <div class="map-wrap fade-in">
+        <iframe
+          src="https://www.google.com/maps?q=38.7339,-9.1355&z=16&output=embed"
+          title="Localização do Beauty & CO LX na Alameda Dom Afonso Henriques 66, Lisboa"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Mapa com a localização do salão Beauty & CO LX em Lisboa">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contacto" aria-label="Formulário de contacto">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <span class="section-label">Contacte-nos</span>
+        <h2 class="section-heading">Marque o seu momento</h2>
+        <p>Tem alguma questão ou deseja marcar o seu momento de beleza? Ligue-nos ou envie-nos uma mensagem e responderemos com a maior brevidade.</p>
+        <div class="contact-detail">
+          <div class="icon" aria-hidden="true">📞</div>
+          <a href="tel:+351917645732">+351 917 645 732</a>
+        </div>
+        <div class="contact-detail">
+          <div class="icon" aria-hidden="true">📍</div>
+          <span>Alameda Dom Afonso Henriques 66 - 1 dto, 1900-183 Lisboa</span>
+        </div>
+      </div>
+      <div class="contact-form-wrap fade-in">
+        <form action="https://checkout.kamkod.com/contact" method="POST" aria-label="Formulário de contacto Beauty & CO LX">
+          <input type="hidden" name="lead_id" value="ChIJD8Z_LuYzGQ0Re0GVc8zsTcc">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="O seu nome" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="O seu email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" placeholder="Escreva a sua mensagem ou pedido de marcação." required></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="cta" aria-label="Enviar mensagem de contacto">Marque a sua visita</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SIGNALS -->
+<section id="confianca" aria-label="Sinais de confiança do salão">
+  <div class="container">
+    <div class="trust-inner fade-in">
+      <span class="section-label">A nossa promessa</span>
+      <h2 class="section-heading">A confiança de quem nos visita</h2>
+      <p>Avaliação 5,0 com 63 reviews. A satisfação de quem nos visita é o nosso maior orgulho.</p>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <span class="t-icon">📅</span>
+          <span>Atendimento por marcação</span>
+        </div>
+        <div class="trust-item">
+          <span class="t-icon">🌿</span>
+          <span>Produtos profissionais</span>
+        </div>
+        <div class="trust-item">
+          <span class="t-icon">💳</span>
+          <span>Pagamento com cartão</span>
+        </div>
+        <div class="trust-item">
+          <span class="t-icon">👩‍🎨</span>
+          <span>Equipa experiente</span>
+        </div>
+        <div class="trust-item">
+          <span class="t-icon">📍</span>
+          <span>Localização central com estacionamento próximo</span>
+        </div>
+      </div>
+      <div class="trust-rating">
+        <span class="stars">★★★★★</span>
+        <span>5,0 — 63 avaliações verificadas no Google</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer aria-label="Rodapé do site Beauty & CO LX">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="nav-logo">Beauty & CO LX</span>
+      <p>Salão de beleza em Lisboa. Um espaço dedicado ao seu cuidado, com profissionalismo e simpatia.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#avis">Avaliações</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#horarios">Horários</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contacto</h4>
+      <p>Alameda Dom Afonso Henriques 66 - 1 dto, 1900-183 Lisboa, Portugal.<br>Telefone: +351 917 645 732.</p>
+      <a href="tel:+351917645732" class="cta" aria-label="Ligar agora para o Beauty & CO LX">Ligar agora</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Beauty &amp; CO LX — Todos os direitos reservados.</p>
+    <p>Salão de beleza Lisboa · Cabeleireiro Lisboa · Estética Lisboa</p>
+  </div>
+</footer>
+
+<script>
+  // BURGER MENU
+  const burger = document.getElementById('burger');
+  const navMenu = document.getElementById('nav-menu');
+
+  burger.addEventListener('click', function() {
+    const isOpen = navMenu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  // Close menu on link click (mobile)
+  navMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navMenu.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // FADE IN on scroll
+  const fadeEls = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeEls.forEach(function(el) {
+    observer.observe(el);
+  });
+
+  // Hero fade in on load
+  window.addEventListener('load', function() {
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+      setTimeout(function() {
+        heroContent.classList.add('visible');
+      }, 150);
+    }
+  });
+</script>
+<!-- KAMKOD:DEMO_START -->
+<script>
+(function(){
+  var URL = 'https://checkout.kamkod.com/?lead=ChIJD8Z_LuYzGQ0Re0GVc8zsTcc';
+  document.addEventListener('click', function(e){
+    var el = e.target.closest('a, button, [role="button"]');
+    if(!el || el.closest('form')) return;               /* formulaire -> endpoint contact */
+    if(el.classList.contains('cta')) { e.preventDefault(); window.location.href = URL; return; }
+    if(el.closest('header nav, nav')) return;           /* navigation interne de la démo */
+    var a = e.target.closest('a');
+    if(!a) return;                                      /* bouton seul hors nav: on laisse */
+    var href = a.getAttribute('href') || '';
+    if(href.charAt(0) === '#') return;                  /* ancres de section */
+    if(/^https?:|^\/\//i.test(href)) return;          /* lien externe réel */
+    e.preventDefault(); window.location.href = URL;     /* tel:, mailto:, javascript:… */
+  }, true);
+})();
+</script>
+<div id="kamkod-demo-banner" style="position:fixed;bottom:0;left:0;right:0;background:#000;color:#fff;padding:12px 16px;text-align:center;z-index:9999;font-family:system-ui,sans-serif;font-size:14px;">
+  Esta é uma pré-visualização do seu futuro site — <a href="https://checkout.kamkod.com/?lead=ChIJD8Z_LuYzGQ0Re0GVc8zsTcc" style="color:#FFD700;font-weight:600;">ative-o agora</a>
+</div>
+<!-- KAMKOD:DEMO_END -->
+</body>
+</html>
